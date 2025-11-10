@@ -268,7 +268,7 @@ export default function Profile() {
           {/* Profile Card */}
           <div className="rounded-[10px] overflow-hidden ">
             {/* Header Section */}
-            <div className="h-[88px] bg-gradient-to-r from-[#878DB3] to-[#001AFF]/30 relative ">
+            <div className="h-[88px] bg-gradient-to-r from-[#878DB3] to-[#4C5AD1]/30 relative">
               <div className="absolute inset-0 flex items-center px-7 mt-32">
                 <img
                   src="https://api.builder.io/api/v1/image/assets/TEMP/344dcf4b50f86e9e2496c7dbc315e853b4b8c063?width=178"
