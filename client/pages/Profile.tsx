@@ -275,7 +275,7 @@ export default function Profile() {
                   alt={fullName}
                   className="w-[89px] h-[86px] rounded-full absolute left-7 top-[28px]"
                 />
-                <div className="ml-[120px] mt-30">
+                <div className="ml-[120px] mt-350">
                   <h2 className="text-black text-xl font-medium">{fullName}</h2>
                   <p className="text-black/50 text-base">{email}</p>
                 </div>
