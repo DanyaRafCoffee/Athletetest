@@ -290,7 +290,7 @@ export default function Profile() {
 
             {/* Form Section */}
             <div className="bg-white/50 p-8">
-              <div className="grid grid-cols-2 gap-x-8 gap-y-6">
+              <div className="grid grid-cols-2 gap-x-8 gap-y-6 mt-20">
                 {/* Full Name */}
                 <div>
                   <label className="block text-black/80 text-base mt-15">
