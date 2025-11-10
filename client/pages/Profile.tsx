@@ -307,7 +307,7 @@ export default function Profile() {
 
                 {/* Username */}
                 <div>
-                  <label className="block text-black/80 text-base mt-60">
+                  <label className="block text-black/80 text-base mt-20">
                     Имя пользователя
                   </label>
                   <input
