@@ -269,7 +269,7 @@ export default function Profile() {
           <div className="rounded-[10px] overflow-hidden">
             {/* Header Section */}
             <div className="h-[88px] bg-gradient-to-r from-[#878DB3] to-[#4C5AD1]/30 relative">
-              <div className="absolute inset-0 flex items-center px-7 mt-36">
+              <div className="absolute inset-0 flex items-center px-7 mt-32">
                 <img
                   src="https://api.builder.io/api/v1/image/assets/TEMP/344dcf4b50f86e9e2496c7dbc315e853b4b8c063?width=178"
                   alt={fullName}
@@ -281,7 +281,7 @@ export default function Profile() {
                 </div>
                 <button
                   onClick={handleSaveSettings}
-                  className="ml-auto bg-[#4182F9] text-white px-5 py-2 rounded-lg text-base mt-32"
+                  className="ml-auto bg-[#4182F9] text-white px-5 py-2 rounded-lg text-base mt-44"
                 >
                   Сохранить настройки
                 </button>
