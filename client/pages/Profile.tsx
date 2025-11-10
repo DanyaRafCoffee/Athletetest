@@ -33,7 +33,7 @@ export default function Profile() {
         {/* Sidebar */}
         <div className="w-[76px] border-r-2 border-[#5F5C5C] relative flex flex-col items-center pt-8 gap-12">
           {/* Navigation Icons */}
-          <div className="space-y-8 flex flex-col items-center mt-72">
+          <div className="space-y-8 flex flex-col items-center mt-98">
             {/* Dashboard Icon - Active */}
             <div className="relative">
               <div className="absolute left-0 top-0 w-[76px] h-[50px] bg-gradient-to-r from-[#4182F9]/50 to-[#4182F9]/0 -ml-10 mt-6 "></div>
