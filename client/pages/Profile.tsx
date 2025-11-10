@@ -64,7 +64,7 @@ export default function Profile() {
 
             {/* Analytics Icon */}
             <svg
-              className="w-[21px] h-[20px] opacity-50 mt-4 ml-2"
+              className="w-[21px] h-[20px] opacity-50 mt-40 ml-2"
               viewBox="0 0 21 20"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
