@@ -165,7 +165,7 @@ export default function Requests() {
 
             {/* Messages Icon - Active */}
             <div className="relative">
-              <div className="absolute left-0 top-0 w-[76px] h-[50px] bg-gradient-to-r from-[#4182F9]/50 to-[#4182F9]/0 -ml-10 mb-44"></div>
+              <div className="absolute left-0 top-0 w-[76px] h-[50px] bg-gradient-to-r from-[#4182F9]/50 to-[#4182F9]/0 -ml-10 mt-[-9999rem]"></div>
               <svg
                 className="w-[21px] h-[21px] relative z-10"
                 viewBox="0 0 21 21"
