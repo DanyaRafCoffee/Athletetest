@@ -281,7 +281,7 @@ export default function Profile() {
                 </div>
                 <button
                   onClick={handleSaveSettings}
-                  className="ml-auto bg-[#4182F9] text-white px-5 py-2 rounded-lg text-base"
+                  className="ml-auto bg-[#4182F9] text-white px-5 py-2 rounded-lg text-base mt-32"
                 >
                   Сохранить настройки
                 </button>
