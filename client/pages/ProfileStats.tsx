@@ -307,7 +307,7 @@ export default function ProfileStats() {
               {/* Left Card - Best Sport */}
               <div className="rounded-[55px] border-[1.5px] border-black bg-gradient-to-r from-[#4F0A0A] to-[#780000] shadow-[0_14px_4px_0_rgba(0,0,0,0.50)] p-6 flex flex-col items-center relative overflow-visible">
                 {/* Badge Image positioned above the card */}
-                <div className="absolute -top-40 left-1/2 transform -translate-x-1/2">
+                <div className="absolute -top-400 left-1/2 transform -translate-x-1/2">
                   <img
                     src={`${USER_STATS.badgeImage}?width=598`}
                     alt="Badge"
