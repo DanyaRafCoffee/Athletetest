@@ -273,7 +273,7 @@ export default function Profile() {
                 <img
                   src="https://api.builder.io/api/v1/image/assets/TEMP/344dcf4b50f86e9e2496c7dbc315e853b4b8c063?width=178"
                   alt={fullName}
-                  className="w-[89px] h-[86px] rounded-full absolute left-7 top-[100px] mt-8"
+                  className="w-[89px] h-[86px] rounded-full absolute left-7 top-[100px] mt-6"
                 />
                 <div className="ml-[120px] mt-28">
                   <h2 className="text-black text-xl font-medium">{fullName}</h2>
