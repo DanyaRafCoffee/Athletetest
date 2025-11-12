@@ -276,24 +276,31 @@ export default function ProfileStats() {
               </div>
               
               {/* Level indicator triangle and badge */}
-              <div 
-              className="absolute top-[-30px] left-1/2 -translate-x-1/2 
-                        flex flex-col items-center"  {/* Изменено только позиционирование */}
-            >
-              <svg
-                className="w-[27px] h-[32px] drop-shadow-[0_5px_4px_rgba(0,0,0,0.75)]"
-                viewBox="0 0 32 33"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                {/* ... */}
-              </svg>
-              
-              <div className="bg-[#3462AB] rounded-lg px-3 py-1 text-white text-sm text-center 
-                            drop-shadow-[0_5px_4px_rgba(0,0,0,0.75)] mt-1">
-                {USER_STATS.currentXP}/{USER_STATS.maxXP}
+              <div className="absolute top-[-30px] left-[665px] flex flex-col items-center">
+                <svg
+                  className="w-[27px] h-[32px] drop-shadow-[0_5px_4px_rgba(0,0,0,0.75)]"
+                  viewBox="0 0 32 33"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M15.6914 0L27.3827 24H4.00006L15.6914 0Z"
+                    fill="url(#paint0_linear)"
+                    stroke="black"
+                    strokeWidth="1.5"
+                  />
+                  <defs>
+                    <linearGradient id="paint0_linear" x1="15.6914" y1="0" x2="15.6914" y2="32" gradientUnits="userSpaceOnUse">
+                      <stop stopColor="#D3D3D3"/>
+                      <stop offset="1" stopColor="#EBEBEB"/>
+                    </linearGradient>
+                  </defs>
+                </svg>
+                
+                <div className="bg-[#3462AB] rounded-lg px-3 py-1 text-white text-sm text-center drop-shadow-[0_5px_4px_rgba(0,0,0,0.75)] mt-1">
+                  {USER_STATS.currentXP}/{USER_STATS.maxXP}
+                </div>
               </div>
-            </div>
               
               {/* Level number */}
               <div className="absolute top-[-40px] right-[150px] text-white text-[50px] font-bold stroke-black stroke-[4px]" style={{ WebkitTextStroke: '4px black' }}>
