@@ -398,7 +398,7 @@ export default function Settings() {
               />
             </div>
 
-            <div className="flex gap-4 items-center mb-6">
+            <div className="flex gap-4 items-center mb-12">
 
               <button
                 onClick={handleSaveSecretQuestion}
