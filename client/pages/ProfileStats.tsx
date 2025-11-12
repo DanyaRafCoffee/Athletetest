@@ -304,7 +304,7 @@ export default function ProfileStats() {
               </div>
               
               {/* Level number */}
-              <div className="absolute top-[-19px] right-[120px] text-white text-[50px] font-bold stroke-black stroke-[4px]" style={{ WebkitTextStroke: '4px black' }}>
+              <div className="absolute top-[-19px] right-[170px] text-white text-[50px] font-bold stroke-black stroke-[4px]" style={{ WebkitTextStroke: '4px black' }}>
                 {USER_STATS.currentLevel}
               </div>
             </div>
