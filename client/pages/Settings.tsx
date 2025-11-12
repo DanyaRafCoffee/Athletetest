@@ -288,19 +288,19 @@ export default function Settings() {
           </div>
 
           {/* Settings Card */}
-          <<div className="rounded-[10px] bg-white/50 p-6 sm:p-8 relative min-h-[748px] max-w-[600px] w-full mx-auto">
+          <div className="rounded-[10px] bg-white/50 p-6 sm:p-8 relative min-h-[748px] w-full max-w-[640px] mx-auto">
             {/* Password Change Section */}
-            <h2 className="text-black text-3xl sm:text-4xl font-bold mb-6 text-center sm:text-left">
+            <h2 className="text-black text-3xl sm:text-4xl font-bold mb-8 text-center sm:text-left">
               Смена пароля
             </h2>
 
-            <div className="flex flex-col gap-4 mb-6">
+            <div className="flex flex-col gap-5 mb-8">
               <input
                 type="password"
                 value={currentPassword}
                 onChange={(e) => setCurrentPassword(e.target.value)}
                 placeholder="Ваш текущий пароль"
-                className="w-full h-[46px] rounded-lg bg-[#F9F9F9]/50 px-4 text-black/40 text-base outline-none placeholder:text-black/40"
+                className="w-full rounded-lg bg-[#F9F9F9]/50 px-4 py-3 text-black/70 text-base outline-none placeholder:text-black/40 focus:bg-white transition"
               />
 
               <input
@@ -308,7 +308,7 @@ export default function Settings() {
                 value={secretQuestionAnswer}
                 onChange={(e) => setSecretQuestionAnswer(e.target.value)}
                 placeholder="Ответ на секретный вопрос"
-                className="w-full h-[45px] rounded-lg bg-[#F9F9F9]/50 px-4 text-black/40 text-[15px] outline-none placeholder:text-black/40"
+                className="w-full rounded-lg bg-[#F9F9F9]/50 px-4 py-3 text-black/70 text-base outline-none placeholder:text-black/40 focus:bg-white transition"
               />
 
               <input
@@ -316,9 +316,11 @@ export default function Settings() {
                 value={newPassword}
                 onChange={(e) => setNewPassword(e.target.value)}
                 placeholder="Ваш новый пароль"
-                className="w-full h-[45px] rounded-lg bg-[#F9F9F9]/50 px-4 text-black/40 text-base outline-none placeholder:text-black/40"
+                className="w-full rounded-lg bg-[#F9F9F9]/50 px-4 py-3 text-black/70 text-base outline-none placeholder:text-black/40 focus:bg-white transition"
               />
             </div>
+  
+
 
             <p className="text-black text-base opacity-80 mb-6 max-w-[526px]">
               Требования: не мене�� 8 символов, не менее 1 заглавной буквы, не
