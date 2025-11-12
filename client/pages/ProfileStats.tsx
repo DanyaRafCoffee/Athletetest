@@ -276,7 +276,7 @@ export default function ProfileStats() {
               </div>
               
               {/* Level indicator triangle and badge */}
-              <div className="absolute top-[-30px] left-1/2 -translate-x-1/2">
+              <div className="absolute top-[-30px] left-1/2 -translate-x-1">
                 <svg
                   className="w-[27px] h-[32px] drop-shadow-[0_5px_4px_rgba(0,0,0,0.75)]"
                   viewBox="0 0 32 33"
