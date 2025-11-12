@@ -413,15 +413,16 @@ export default function Settings() {
               >
                 Выйти
               </button>
-            </div>
-
-            <div className="flex justify-between items-end">
               <button
                 onClick={handleDeleteAccount}
                 className="w-[217px] h-[38px] rounded-lg bg-[#B52626] text-white text-base text-center"
               >
                 Удалить учетную запись
               </button>
+            </div>
+
+            <div className="flex justify-between items-end">
+              
               
 
               <p className="text-black text-base opacity-80">
