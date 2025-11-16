@@ -1,5 +1,8 @@
 import { useNavigate } from "react-router-dom";
-import { PUBLIC_PROFILE_DATA, CAT_PLACEHOLDER } from "@/constants/publicProfileConstants";
+import {
+  PUBLIC_PROFILE_DATA,
+  CAT_PLACEHOLDER,
+} from "@/constants/publicProfileConstants";
 
 export default function PublicProfile() {
   const navigate = useNavigate();
@@ -89,7 +92,8 @@ export default function PublicProfile() {
           <div
             className="absolute top-0 left-0 right-0 h-[88px] rounded-t-[10px]"
             style={{
-              background: "linear-gradient(90deg, #878DB3 0%, rgba(0, 26, 255, 0.31) 100%)",
+              background:
+                "linear-gradient(90deg, #878DB3 0%, rgba(0, 26, 255, 0.31) 100%)",
               opacity: 0.5,
             }}
           />
@@ -110,7 +114,8 @@ export default function PublicProfile() {
               </h1>
 
               <p className="text-white text-[22px] font-medium mb-6">
-                Зарегистрировался в AthleteLink: {PUBLIC_PROFILE_DATA.registrationDate}
+                Зарегистрировался в AthleteLink:{" "}
+                {PUBLIC_PROFILE_DATA.registrationDate}
               </p>
 
               <div className="flex gap-4 flex-wrap">
@@ -180,13 +185,17 @@ export default function PublicProfile() {
                 </div>
 
                 <h3 className="text-[#D9D9D9] text-2xl font-light text-center mt-4">
-                  Лучший спорт<br />Spectrum: {PUBLIC_PROFILE_DATA.bestSport.name}
+                  Лучший спорт
+                  <br />
+                  Spectrum: {PUBLIC_PROFILE_DATA.bestSport.name}
                 </h3>
 
                 <p className="text-[#D9D9D9] text-lg text-center mt-4">
-                  Ранг: {PUBLIC_PROFILE_DATA.bestSport.rank} ({PUBLIC_PROFILE_DATA.bestSport.rankProgress})
+                  Ранг: {PUBLIC_PROFILE_DATA.bestSport.rank} (
+                  {PUBLIC_PROFILE_DATA.bestSport.rankProgress})
                   <br />
-                  Глобальный рейтинг: {PUBLIC_PROFILE_DATA.bestSport.globalRanking}
+                  Глобальный рейтинг:{" "}
+                  {PUBLIC_PROFILE_DATA.bestSport.globalRanking}
                 </p>
 
                 <p className="text-[#D9D9D9] text-lg text-center mt-4">
@@ -229,10 +238,9 @@ export default function PublicProfile() {
                     background: `linear-gradient(90deg, ${PUBLIC_PROFILE_DATA.otherSports[0].gradientFrom} 0%, ${PUBLIC_PROFILE_DATA.otherSports[0].gradientTo} 100%)`,
                   }}
                 >
-                  <p
-                    className="text-white text-[22px] font-medium"
-                  >
-                    {PUBLIC_PROFILE_DATA.otherSports[0].name} ({PUBLIC_PROFILE_DATA.otherSports[0].score})
+                  <p className="text-white text-[22px] font-medium">
+                    {PUBLIC_PROFILE_DATA.otherSports[0].name} (
+                    {PUBLIC_PROFILE_DATA.otherSports[0].score})
                   </p>
                 </div>
               </div>
@@ -263,10 +271,9 @@ export default function PublicProfile() {
                     background: `linear-gradient(90deg, ${PUBLIC_PROFILE_DATA.otherSports[1].gradientFrom} 0%, ${PUBLIC_PROFILE_DATA.otherSports[1].gradientTo} 100%)`,
                   }}
                 >
-                  <p
-                    className="text-white text-[22px] font-medium"
-                  >
-                    {PUBLIC_PROFILE_DATA.otherSports[1].name} ({PUBLIC_PROFILE_DATA.otherSports[1].score})
+                  <p className="text-white text-[22px] font-medium">
+                    {PUBLIC_PROFILE_DATA.otherSports[1].name} (
+                    {PUBLIC_PROFILE_DATA.otherSports[1].score})
                   </p>
                 </div>
               </div>
@@ -297,10 +304,9 @@ export default function PublicProfile() {
                     background: `linear-gradient(90deg, ${PUBLIC_PROFILE_DATA.otherSports[2].gradientFrom} 0%, ${PUBLIC_PROFILE_DATA.otherSports[2].gradientTo} 100%)`,
                   }}
                 >
-                  <p
-                    className="text-white text-[22px] font-medium"
-                  >
-                    {PUBLIC_PROFILE_DATA.otherSports[2].name} ({PUBLIC_PROFILE_DATA.otherSports[2].score})
+                  <p className="text-white text-[22px] font-medium">
+                    {PUBLIC_PROFILE_DATA.otherSports[2].name} (
+                    {PUBLIC_PROFILE_DATA.otherSports[2].score})
                   </p>
                 </div>
               </div>
@@ -331,10 +337,9 @@ export default function PublicProfile() {
                     background: `linear-gradient(90deg, ${PUBLIC_PROFILE_DATA.otherSports[3].gradientFrom} 0%, ${PUBLIC_PROFILE_DATA.otherSports[3].gradientTo} 100%)`,
                   }}
                 >
-                  <p
-                    className="text-white text-xl font-medium"
-                  >
-                    {PUBLIC_PROFILE_DATA.otherSports[3].name} ({PUBLIC_PROFILE_DATA.otherSports[3].score})
+                  <p className="text-white text-xl font-medium">
+                    {PUBLIC_PROFILE_DATA.otherSports[3].name} (
+                    {PUBLIC_PROFILE_DATA.otherSports[3].score})
                   </p>
                 </div>
               </div>
@@ -356,7 +361,8 @@ export default function PublicProfile() {
                   <div className="flex gap-2">
                     <div className="border-[0.3px] border-white rounded-[50px] px-4 py-2 flex-1">
                       <p className="text-white text-right text-base font-light">
-                        {PUBLIC_PROFILE_DATA.lastGame.date}, {PUBLIC_PROFILE_DATA.lastGame.time}
+                        {PUBLIC_PROFILE_DATA.lastGame.date},{" "}
+                        {PUBLIC_PROFILE_DATA.lastGame.time}
                       </p>
                     </div>
                     <div className="border-[0.3px] border-white rounded-[50px] px-4 py-2">
@@ -417,9 +423,7 @@ export default function PublicProfile() {
 
                 <div className="flex items-center gap-4">
                   <div className="w-[76px] h-[76px] rounded-[20px] border-[2.6px] border-black bg-[#D9D9D9]/20 flex items-center justify-center">
-                    <p
-                      className="text-[#D9D9D9]/50 text-2xl font-bold"
-                    >
+                    <p className="text-[#D9D9D9]/50 text-2xl font-bold">
                       {PUBLIC_PROFILE_DATA.overallRanking.position}
                     </p>
                   </div>
