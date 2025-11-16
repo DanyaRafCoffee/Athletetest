@@ -157,7 +157,7 @@ export default function PublicProfile() {
             {/* Left Column - Best Sport */}
             <div className="col-span-3">
               <div
-                className="rounded-[55px] border-[1.5px] border-black shadow-[0_14px_4px_0_rgba(0,0,0,0.50)] p-6 flex flex-col items-center relative overflow-visible min-h-[445px]"
+                className="rounded-[55px] border-[1.5px] border-black shadow-[0_14px_4px_0_rgba(0,0,0,0.50)] p-6 flex flex-col items-center relative overflow-visible min-h-[445px] mt-8"
                 style={{
                   background: `linear-gradient(90deg, ${PUBLIC_PROFILE_DATA.bestSport.gradientFrom} 0%, ${PUBLIC_PROFILE_DATA.bestSport.gradientTo} 100%)`,
                 }}
