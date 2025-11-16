@@ -134,10 +134,3 @@ export const PUBLIC_PROFILE_DATA = {
   welcomeMessage: "Добрый день, Захар",
   currentDate: "Сб, 11 октября 2025",
 };
-
-// Cat placeholder image
-export const CAT_PLACEHOLDER = {
-  image: "https://api.builder.io/api/v1/image/assets/TEMP/592971601b73e2186d29e697d3b86bb56af5f25e",
-  caption: "нет слов",
-  subcaption: "милый тушк",
-};
