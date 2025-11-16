@@ -266,7 +266,7 @@ export default function PublicProfile() {
                 >
                   <p
                     className="text-white text-[22px] font-medium"
-                    /*style={{ WebkitTextStroke: "1.5px black" }}8?
+                    /*style={{ WebkitTextStroke: "1.5px black" }}*/
                   >
                     {PUBLIC_PROFILE_DATA.otherSports[1].name} ({PUBLIC_PROFILE_DATA.otherSports[1].score})
                   </p>
