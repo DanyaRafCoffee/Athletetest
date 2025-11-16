@@ -119,17 +119,17 @@ export default function PublicProfile() {
               </p>
 
               <div className="flex gap-4 flex-wrap">
-                <div className="border border-white rounded-[50px] px-6 py-3">
+                <div className="border border-white rounded-[30px] px-6 py-3">
                   <p className="text-white text-xl opacity-80">
                     Пол: {PUBLIC_PROFILE_DATA.gender}
                   </p>
                 </div>
-                <div className="border border-white rounded-[50px] px-6 py-3">
+                <div className="border border-white rounded-[30px] px-6 py-3">
                   <p className="text-white text-xl opacity-80">
                     Возраст: {PUBLIC_PROFILE_DATA.age}
                   </p>
                 </div>
-                <div className="border border-white rounded-[50px] px-6 py-3">
+                <div className="border border-white rounded-[30px] px-6 py-3">
                   <p className="text-white text-xl opacity-80">
                     Местоположение: {PUBLIC_PROFILE_DATA.location}
                   </p>
