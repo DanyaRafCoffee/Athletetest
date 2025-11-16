@@ -173,7 +173,7 @@ export default function PublicProfile() {
 
                 {/* Roman Numeral */}
                 <div
-                  className="absolute text-[100px] font-bold text-center mt-20"
+                  className="text-[100px] font-bold text-center mt-20"
                   style={{
                     color: PUBLIC_PROFILE_DATA.bestSport.badgeColor,
                     WebkitTextStroke: "3px black",
