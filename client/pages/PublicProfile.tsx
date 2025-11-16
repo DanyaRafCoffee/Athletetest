@@ -139,7 +139,7 @@ export default function PublicProfile() {
 
             {/* Cat Video */}
             <div className="flex flex-col items-center mt-16">
-              <div className="w-[190px] h-[190px] rounded-lg overflow-hidden bg-gray-800">
+              <div className="w-[260px] h-[260px] rounded-lg overflow-hidden bg-gray-800">
                 <video
                   src="/cat_stick.webm"
                   autoPlay
