@@ -221,7 +221,7 @@ export default function PublicProfile() {
                     className="w-[117px] h-[116px] object-contain -rotate-[15deg] scale-125"
                   />
                   <div
-                    className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-[48px] font-medium -rotate-[15deg] text-center mt-8 ml-3"
+                    className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-[48px] font-medium -rotate-[20deg] text-center mt-8 ml-3"
                     style={{
                       color: PUBLIC_PROFILE_DATA.otherSports[0].badgeColor,
                       WebkitTextStroke: "1px black",
