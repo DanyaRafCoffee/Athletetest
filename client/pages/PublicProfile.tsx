@@ -221,7 +221,7 @@ export default function PublicProfile() {
                     className="w-[117px] h-[116px] object-contain -rotate-[15deg] scale-125"
                   />
                   <div
-                    className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-[44px] font-medium -rotate-[15deg] text-center"
+                    className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-[48px] font-medium -rotate-[15deg] text-center"
                     style={{
                       color: PUBLIC_PROFILE_DATA.otherSports[0].badgeColor,
                       WebkitTextStroke: "1px black",
@@ -251,7 +251,7 @@ export default function PublicProfile() {
                   <img
                     src={`${PUBLIC_PROFILE_DATA.otherSports[1].badgeImage}?width=234`}
                     alt={PUBLIC_PROFILE_DATA.otherSports[1].name}
-                    className="w-[117px] h-[116px] object-contain -rotate-[15deg] scale-150"
+                    className="w-[117px] h-[116px] object-contain -rotate-[15deg] scale-125"
                   />
                   <div
                     className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-[48px] font-bold -rotate-[15deg] text-center"
@@ -284,10 +284,10 @@ export default function PublicProfile() {
                   <img
                     src={`${PUBLIC_PROFILE_DATA.otherSports[2].badgeImage}?width=234`}
                     alt={PUBLIC_PROFILE_DATA.otherSports[2].name}
-                    className="w-[117px] h-[116px] object-contain -rotate-[15deg] scale-150"
+                    className="w-[117px] h-[116px] object-contain -rotate-[15deg] scale-125"
                   />
                   <div
-                    className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-[44px] font-medium -rotate-[15deg] text-center"
+                    className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-[48px] font-medium -rotate-[15deg] text-center"
                     style={{
                       color: PUBLIC_PROFILE_DATA.otherSports[2].badgeColor,
                       WebkitTextStroke: "1px black",
@@ -317,10 +317,10 @@ export default function PublicProfile() {
                   <img
                     src={`${PUBLIC_PROFILE_DATA.otherSports[3].badgeImage}?width=234`}
                     alt={PUBLIC_PROFILE_DATA.otherSports[3].name}
-                    className="w-[117px] h-[116px] object-contain -rotate-[15deg] scale-150"
+                    className="w-[117px] h-[116px] object-contain -rotate-[15deg] scale-125"
                   />
                   <div
-                    className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-[44px] font-medium -rotate-[15deg] text-center"
+                    className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-[48px] font-medium -rotate-[15deg] text-center"
                     style={{
                       color: PUBLIC_PROFILE_DATA.otherSports[3].badgeColor,
                       WebkitTextStroke: "1px black",
