@@ -224,7 +224,7 @@ export default function PublicProfile() {
                     className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-[44px] font-medium -rotate-[15deg] text-center"
                     style={{
                       color: PUBLIC_PROFILE_DATA.otherSports[0].badgeColor,
-                      WebkitTextStroke: "3px black",
+                      WebkitTextStroke: "1px black",
                       textShadow: "0 10px 4px rgba(0, 0, 0, 0.50)",
                       fontFamily: "Piazzolla, serif",
                     }}
@@ -257,7 +257,7 @@ export default function PublicProfile() {
                     className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-[44px] font-medium -rotate-[15deg] text-center"
                     style={{
                       color: PUBLIC_PROFILE_DATA.otherSports[1].badgeColor,
-                      WebkitTextStroke: "3px black",
+                      WebkitTextStroke: "1px black",
                       textShadow: "0 10px 4px rgba(0, 0, 0, 0.50)",
                       fontFamily: "Piazzolla, serif",
                     }}
@@ -290,7 +290,7 @@ export default function PublicProfile() {
                     className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-[44px] font-medium -rotate-[15deg] text-center"
                     style={{
                       color: PUBLIC_PROFILE_DATA.otherSports[2].badgeColor,
-                      WebkitTextStroke: "3px black",
+                      WebkitTextStroke: "1px black",
                       textShadow: "0 10px 4px rgba(0, 0, 0, 0.50)",
                       fontFamily: "Piazzolla, serif",
                     }}
@@ -323,7 +323,7 @@ export default function PublicProfile() {
                     className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-[44px] font-medium -rotate-[15deg] text-center"
                     style={{
                       color: PUBLIC_PROFILE_DATA.otherSports[3].badgeColor,
-                      WebkitTextStroke: "3px black",
+                      WebkitTextStroke: "1px black",
                       textShadow: "0 10px 4px rgba(0, 0, 0, 0.50)",
                       fontFamily: "Piazzolla, serif",
                     }}
