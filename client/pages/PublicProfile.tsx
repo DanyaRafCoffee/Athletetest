@@ -218,7 +218,7 @@ export default function PublicProfile() {
                   <img
                     src={`${PUBLIC_PROFILE_DATA.otherSports[0].badgeImage}?width=2304`}
                     alt={PUBLIC_PROFILE_DATA.otherSports[0].name}
-                    className="w-[117px] h-[116px] object-contain -rotate-[15deg] scale-150"
+                    className="w-[117px] h-[116px] object-contain -rotate-[15deg] scale-125"
                   />
                   <div
                     className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-[44px] font-medium -rotate-[15deg] text-center"
