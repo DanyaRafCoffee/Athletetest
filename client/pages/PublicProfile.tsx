@@ -403,7 +403,7 @@ export default function PublicProfile() {
                         className="w-[38px] h-[36px] rounded-full object-cover"
                       />
                       <p
-                        className="text-white text-[10px] font-bold leading-tight"
+                        className="text-white text-2x1 font-light"
                         style={{ WebkitTextStroke: "1px white" }}
                       >
                         {opponent.name}
