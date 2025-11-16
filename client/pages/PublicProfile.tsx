@@ -398,7 +398,7 @@ export default function PublicProfile() {
                       className="rounded-[25px] border-[1.5px] border-black bg-gradient-to-r from-[#4F0A0A] to-[#780000] p-4 flex items-center gap-3 flex-1"
                     >
                       <img
-                        src={`${opponent.avatar}?width=7`}
+                        src={`${opponent.avatar}?width=76`}
                         alt={opponent.name}
                         className="w-[38px] h-[36px] rounded-full object-cover"
                       />
