@@ -108,12 +108,12 @@ export default function PublicProfile() {
             />
 
             {/* Info */}
-            <div className="flex-1 mt-12">
+            <div className="flex-1 mt-16">
               <h1 className="text-white text-[36px] font-light mb-6">
                 {PUBLIC_PROFILE_DATA.playerName}
               </h1>
 
-              <p className="text-white text-[22px] font-medium mb-6">
+              <p className="text-white text-[18px] font-medium mb-6">
                 Зарегистрировался в AthleteLink:{" "}
                 {PUBLIC_PROFILE_DATA.registrationDate}
               </p>
