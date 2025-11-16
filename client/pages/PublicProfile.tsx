@@ -395,7 +395,7 @@ export default function PublicProfile() {
                   {PUBLIC_PROFILE_DATA.recentOpponents.map((opponent) => (
                     <div
                       key={opponent.id}
-                      className="rounded-[25px] border-[1.5px] border-black bg-gradient-to-r from-[#4F0A0A] to-[#780000] p-4 flex items-center gap-3 flex-1"
+                      className="rounded-[25px] border-[1.5px] border-black bg-gradient-to-r from-[#4F0A0A] to-[#780000] p-3 flex items-center gap-3 flex-1"
                     >
                       <img
                         src={`${opponent.avatar}?width=76`}
