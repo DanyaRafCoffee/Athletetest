@@ -117,7 +117,7 @@ export const PUBLIC_PROFILE_DATA = {
     },
     {
       id: 2,
-      name: "��рылов (Spectrum) Даниил",
+      name: "Крылов (Spectrum) Даниил",
       avatar: "https://api.builder.io/api/v1/image/assets/TEMP/1c0c1f7ca8ef2ae4380cf6cb33cd212e1dc8d200",
     },
   ] as Opponent[],
