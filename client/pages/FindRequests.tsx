@@ -1,5 +1,6 @@
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
+import { SPORTS, DATE_FILTERS } from "@/constants/filterConstants";
 
 interface RequestItem {
   id: number;
