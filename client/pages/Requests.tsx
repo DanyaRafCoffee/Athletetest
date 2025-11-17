@@ -315,7 +315,7 @@ export default function Requests() {
               </div>
 
               {/* Profile Picture */}
-              <<button
+              <button
                 onClick={() => navigate("/profile")}
               >
                 <img
