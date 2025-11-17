@@ -140,7 +140,7 @@ export default function RequestData() {
                       {requestData.players.map((player) => (
                         <div
                           key={player.id}
-                          className="rounded-[25px] border-[1.5px] border-black p-1 flex items-center gap-3"
+                          className="rounded-[25px] border-[1.5px] border-black p-19 flex items-center gap-3"
                           style={{
                             background: `linear-gradient(90deg, ${player.gradientFrom} 0%, ${player.gradientTo} 100%)`,
                           }}
