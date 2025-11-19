@@ -147,6 +147,17 @@ export default function CreateRequest() {
 
           {/* Main Content Area */}
           <div className="rounded-[10px] bg-[#797777]/50 p-8 min-h-[918px]">
+            <div
+            className="absolute inset-0 -z-10 rounded-[50px]"
+            style={{
+              backgroundImage:
+                "url('https://cdn.builder.io/api/v1/image/assets%2F9b4b6868ed8d4ab0841339e996a44e0f%2F29814a62ea5a4dbaab3e007976816fb6?format=webp&width=800')",
+              backgroundSize: "250px 250px",
+              backgroundPosition: "0 0",
+              backgroundRepeat: "repeat",
+              opacity: 0.05,
+            }}
+            ></div>
             {/* Title */}
             <h1 className="text-white text-[64px] font-light text-center mb-8 stroke-black">
               Создание новой заявки
