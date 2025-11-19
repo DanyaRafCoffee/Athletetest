@@ -5,6 +5,7 @@ import { USER_STATS } from "@/constants/statsConstants";
 
 export default function ProfileStats() {
   const navigate = useNavigate();
+  const [bounceCount, setBounceCount] = useState(0);
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-black to-[#493D02] overflow-y-auto">
