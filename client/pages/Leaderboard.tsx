@@ -83,35 +83,36 @@ export default function Leaderboard() {
               >
                 <span className="text-white text-[24px] font-light">Показать меня</span>
               </button>
-            </div>
+              <div className="flex gap-4">
+                <div className="relative" ref={sportDropdownRef}>
+                  <button
+                    onClick={() => setShowSportDropdown(!showSportDropdown)}
+                    className="w-[380px] h-[76px] rounded-[20px] border-[2.6px] border-black bg-[#D9D9D9]/40 flex items-center justify-center px-6 relative"
+                  >
+                    <span className="text-white text-[32px] font-light">{sportFilter}</span>
+                  </button>
 
-            <div className="flex gap-4">
-              <div className="relative" ref={sportDropdownRef}>
-                <button
-                  onClick={() => setShowSportDropdown(!showSportDropdown)}
-                  className="w-[380px] h-[76px] rounded-[20px] border-[2.6px] border-black bg-[#D9D9D9]/40 flex items-center justify-center px-6 relative"
-                >
-                  <span className="text-white text-[32px] font-light">{sportFilter}</span>
-                </button>
-
-                {showSportDropdown && (
-                  <div className="absolute top-[88px] left-0 w-[380px] bg-[#2a2a2a] border-[2.6px] border-black rounded-[20px] shadow-lg z-50">
-                    {RATING_SPORTS.map((sport) => (
-                      <button
-                        key={sport}
-                        onClick={() => {
-                          setSportFilter(sport);
-                          setShowSportDropdown(false);
-                        }}
-                        className="w-full px-6 py-4 text-left text-white text-[20px] font-light hover:bg-[#3a3a3a] transition-colors border-b border-white/20 last:border-b-0"
-                      >
-                        {sport}
-                      </button>
-                    ))}
-                  </div>
-                )}
+                  {showSportDropdown && (
+                    <div className="absolute top-[88px] left-0 w-[380px] bg-[#2a2a2a] border-[2.6px] border-black rounded-[20px] shadow-lg z-50">
+                      {RATING_SPORTS.map((sport) => (
+                        <button
+                          key={sport}
+                          onClick={() => {
+                            setSportFilter(sport);
+                            setShowSportDropdown(false);
+                          }}
+                          className="w-full px-6 py-4 text-left text-white text-[20px] font-light hover:bg-[#3a3a3a] transition-colors border-b border-white/20 last:border-b-0"
+                        >
+                          {sport}
+                        </button>
+                      ))}
+                    </div>
+                  )}
+                </div>
               </div>
             </div>
+
+            
 
             <div className="space-y-3 pr-2 max-h-[700px] overflow-y-auto custom-scrollbar">
               {LEADERBOARD_DATA.map((player) => (
