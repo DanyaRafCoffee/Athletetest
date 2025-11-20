@@ -32,7 +32,7 @@ export const USER_STATS = {
   
   // Current ranking card
   rankingName: "Крылов (Spectrum) Даниил",
-  rankingTitle: "Chess Grandmaster",
+  rankingTitle: "",
   rankingLevel: 9,
   rankingXP: "4500/5000",
   rankingPosition: "#1",
