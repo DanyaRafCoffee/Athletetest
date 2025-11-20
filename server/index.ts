@@ -30,7 +30,7 @@ export function createServer() {
     }
 
     try {
-      const apiKey = "5fc13c47-2b27-472d-ad58-b5695c1e0d67";
+      const apiKey = "fc9d5a45-9eb0-4980-a2c8-21b53a4ddbd4";
       const apiUrl = `https://geocode-maps.yandex.ru/1.x/?apikey=${apiKey}&geocode=${longitude},${latitude}&format=json`;
 
       console.log("Calling Yandex API:", apiUrl);
