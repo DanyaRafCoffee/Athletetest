@@ -57,14 +57,23 @@ export default function YandexMap({ onAddressSelect, height = "327px" }: YandexM
 
         fetch(apiUrl)
           .then((response) => {
+            console.log("Geocoding response status:", response.status);
             if (!response.ok) {
-              throw new Error(`HTTP error! status: ${response.status}`);
+              return response.json().then((errorData) => {
+                console.error("Server error response:", errorData);
+                throw new Error(`HTTP error! status: ${response.status}, message: ${errorData.error}`);
+              }).catch(() => {
+                throw new Error(`HTTP error! status: ${response.status}`);
+              });
             }
             return response.json();
           })
           .then((data) => {
+            console.log("Geocoding response data:", data);
             if (data.address) {
               onAddressSelect(data.address);
+            } else {
+              console.warn("No address found in response");
             }
           })
           .catch((error) => {
