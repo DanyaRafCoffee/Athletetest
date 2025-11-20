@@ -66,6 +66,7 @@ export default function YandexMap({ onAddressSelect, height = "327px" }: YandexM
           }
         }).catch((error: any) => {
           console.error("Geocoding error:", error);
+          console.error("Error details:", JSON.stringify(error));
         });
       });
     };
