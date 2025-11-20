@@ -77,7 +77,12 @@ export default function Leaderboard() {
             <div className="flex gap-4 mb-12">
               
 
-              <
+              <button
+                onClick={() => setActiveTab("me")}
+                className={`h-[76px] px-8 rounded-[20px] border-[2.6px] border-black transition-all ${activeTab === "me" ? "bg-[#D9D9D9]/40" : "bg-[#D9D9D9]/20"}`}
+              >
+                <span className="text-white text-[24px] font-light">Показать меня</span>
+              </button>
               <div className="flex gap-4">
                 <div className="relative" ref={sportDropdownRef}>
                   <button
@@ -105,12 +110,6 @@ export default function Leaderboard() {
                   )}
                 </div>
               </div>
-            button
-            onClick={() => setActiveTab("me")}
-            className={`h-[76px] px-8 rounded-[20px] border-[2.6px] border-black transition-all ${activeTab === "me" ? "bg-[#D9D9D9]/40" : "bg-[#D9D9D9]/20"}`}
-              >
-            <span className="text-white text-[24px] font-light">Показать меня</span>
-          </button>
             </div>
 
             
