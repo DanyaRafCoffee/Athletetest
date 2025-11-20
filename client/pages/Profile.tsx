@@ -267,7 +267,7 @@ export default function Profile() {
 
               {/* Profile Picture */}
               <img
-                src="https://api.builder.io/api/v1/image/assets/TEMP/000c31178b1986558f577f90ead0f3bed101a8c7?width=94"
+                src="/placeholder_avatar.jpg"
                 alt="Profile"
                 className="w-[47px] h-[44px] rounded-[10px]"
               />
@@ -277,10 +277,10 @@ export default function Profile() {
           {/* Profile Card */}
           <div className="rounded-[10px] overflow-hidden ">
             {/* Header Section */}
-            <div className="h-[88px] bg-gradient-to-r from-[#878DB3] to-[#001AFF]/30 opacity-50 relative ">
+            <div className="h-[88px] bg-gradient-to-r from-[#878DB3] to-[#001AFF]/30 relative ">
               <div className="flex items-center px-7 py-8 gap-6">
                 <img
-                  src="https://api.builder.io/api/v1/image/assets/TEMP/344dcf4b50f86e9e2496c7dbc315e853b4b8c063?width=178"
+                  src="/placeholder_avatar.jpg"
                   alt={fullName}
                   className="w-[89px] h-[86px] rounded-full absolute left-7 top-[100px] mt-6"
                 />

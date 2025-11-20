@@ -65,6 +65,6 @@ export const USER_STATS = {
   // Profile image URLs
   profileImage: "https://api.builder.io/api/v1/image/assets/TEMP/000c31178b1986558f577f90ead0f3bed101a8c7",
   rankingProfileImage: "https://api.builder.io/api/v1/image/assets/TEMP/32ebcf84f02708bee100e78af81c2b3d4553326e",
-  catImage: "https://api.builder.io/api/v1/image/assets/TEMP/592971601b73e2186d29e697d3b86bb56af5f25e",
+  catImage: "/wawa_cat.webp",
   badgeImage: "https://api.builder.io/api/v1/image/assets/TEMP/ebe57f66a484ef88c48baa2f264625de94153ec5"
 };

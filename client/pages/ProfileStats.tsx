@@ -1,8 +1,11 @@
+import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { motion } from "framer-motion";
 import { USER_STATS } from "@/constants/statsConstants";
 
 export default function ProfileStats() {
   const navigate = useNavigate();
+  const [bounceCount, setBounceCount] = useState(0);
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-black to-[#493D02] overflow-y-auto">
@@ -453,13 +456,40 @@ export default function ProfileStats() {
                   </div>
                 </div>
 
-                {/* Cat Image */}
+                {/* Cat Image with Bounce Animation */}
                 <div className="flex justify-center">
-                  <img
-                    src={`${USER_STATS.catImage}?width=720`}
-                    alt="Cat"
-                    className="w-[360px] h-[360px] object-contain"
-                  />
+                  <motion.div
+                    key={bounceCount}
+                    className="cursor-pointer"
+                    onClick={() => setBounceCount((prev) => prev + 1)}
+                    initial={{ scale: 1 }}
+                    animate={{
+                      scale: [1, 0.6, 1.4, 0.9, 1.1, 0.95, 1.05, 1],
+                      rotate: [0, -5, 5, -3, 3, 0],
+                      y: [0, -15, -30, -20, -10, -3, 0],
+                    }}
+                    transition={{
+                      duration: 0.8,
+                      times: [0, 0.15, 0.3, 0.45, 0.6, 0.75, 0.9, 1],
+                      ease: "easeInOut",
+                    }}
+                    whileHover={{ scale: 1.05 }}
+                  >
+                    <motion.img
+                      src={USER_STATS.catImage}
+                      alt="Chubby cat"
+                      className="w-[360px] h-[360px] object-contain drop-shadow-2xl select-none"
+                      animate={{
+                        scaleX: [1, 0.8, 1.3, 0.9, 1.1, 1],
+                        scaleY: [1, 1.3, 0.7, 1.1, 0.95, 1],
+                      }}
+                      transition={{
+                        duration: 0.8,
+                        times: [0, 0.15, 0.3, 0.5, 0.7, 1],
+                        ease: [0.34, 1.56, 0.64, 1],
+                      }}
+                    />
+                  </motion.div>
                 </div>
               </div>
             </div>
