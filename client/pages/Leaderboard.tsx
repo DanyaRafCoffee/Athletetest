@@ -7,6 +7,26 @@ export default function Leaderboard() {
   const navigate = useNavigate();
   const [activeTab, setActiveTab] = useState<"overall" | "me">("overall");
 
+  export default function FindRequests() {
+    const navigate = useNavigate();
+    const [sportFilter, setSportFilter] = useState("Литрбол");
+    const [dateFilter, setDateFilter] = useState("По дате");
+    const [showSportDropdown, setShowSportDropdown] = useState(false);
+    const [showDateDropdown, setShowDateDropdown] = useState(false);
+
+    const sportDropdownRef = useRef<HTMLDivElement>(null);
+    const dateDropdownRef = useRef<HTMLDivElement>(null);
+
+    useEffect(() => {
+      const handleClickOutside = (event: MouseEvent) => {
+        if (sportDropdownRef.current && !sportDropdownRef.current.contains(event.target as Node)) {
+          setShowSportDropdown(false);
+        }
+        if (dateDropdownRef.current && !dateDropdownRef.current.contains(event.target as Node)) {
+          setShowDateDropdown(false);
+        }
+      };
+
   return (
     <div className="min-h-screen bg-gradient-to-b from-black to-[#493D02] overflow-y-auto">
       <div className="flex min-h-screen">
