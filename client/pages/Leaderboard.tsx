@@ -185,6 +185,7 @@ export default function Leaderboard() {
             </div>
 
             {/* Custom Scrollbar Indicator */}
+            <div className="absolute right-8 top-[260px] w-[6px] h-[71px] rounded-full bg-[#5D5D5D]"></div>
           </div>
         </div>
       </div>
