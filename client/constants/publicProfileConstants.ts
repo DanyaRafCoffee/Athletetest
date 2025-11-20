@@ -36,7 +36,7 @@ export const PUBLIC_PROFILE_DATA = {
   registrationDate: "31 февраля 2020 года",
   
   // Profile images
-  avatar: "https://api.builder.io/api/v1/image/assets/TEMP/2a0fa7549221137c07533a5988cd44ae32cda192",
+  avatar: "/placeholder_avatar.jpg",
   
   // Best sport
   bestSport: {
