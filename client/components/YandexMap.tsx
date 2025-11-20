@@ -58,7 +58,12 @@ export default function YandexMap({ onAddressSelect, height = "327px" }: YandexM
         const apiUrl = `https://geocode-maps.yandex.ru/1.x/?apikey=5fc13c47-2b27-472d-ad58-b5695c1e0d67&geocode=${longitude},${latitude}&format=json`;
 
         fetch(apiUrl)
-          .then((response) => response.json())
+          .then((response) => {
+            if (!response.ok) {
+              throw new Error(`HTTP error! status: ${response.status}`);
+            }
+            return response.json();
+          })
           .then((data) => {
             if (
               data.response &&
