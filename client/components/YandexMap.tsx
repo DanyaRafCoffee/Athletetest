@@ -40,7 +40,6 @@ export default function YandexMap({ onAddressSelect, height = "327px" }: YandexM
       });
 
       mapInstance.current = map;
-      setMapReady(true);
 
       map.events.add("click", (e: any) => {
         const coords = e.get("coords");
