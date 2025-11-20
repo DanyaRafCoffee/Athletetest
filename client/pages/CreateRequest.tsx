@@ -7,6 +7,7 @@ import {
   PopoverTrigger,
   PopoverContent,
 } from "@/components/ui/popover";
+import YandexMap from "@/components/YandexMap";
 
 export default function CreateRequest() {
   const navigate = useNavigate();
@@ -200,8 +201,7 @@ export default function CreateRequest() {
             <div
               className="absolute inset-0 -z-10 rounded-[50px]"
               style={{
-                backgroundImage:
-                  "url('/silver.png')",
+                backgroundImage: "url('/silver.png')",
                 backgroundSize: "250px 250px",
                 backgroundPosition: "0 0",
                 backgroundRepeat: "repeat",
@@ -444,13 +444,10 @@ export default function CreateRequest() {
                 </div>
 
                 {/* Map */}
-                <div className="w-full h-[327px] rounded-[40px] overflow-hidden">
-                  <img
-                    src="https://api.builder.io/api/v1/image/assets/TEMP/dc4c9bfcde261847aacd27512fcbd319bc6457ec?width=1134"
-                    alt="Map"
-                    className="w-full h-full object-cover"
-                  />
-                </div>
+                <YandexMap
+                  onAddressSelect={(address) => setLocation(address)}
+                  height="327px"
+                />
 
                 {/* Submit Button */}
                 <button
