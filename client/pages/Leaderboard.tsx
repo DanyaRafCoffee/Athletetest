@@ -99,7 +99,7 @@ export default function Leaderboard() {
                 </button>
 
                 {showSportDropdown && (
-                  <div className="absolute top-[88px] left-0 w-[380px] bg-[#2a2a2a] border-[2.6px] border-black rounded-[20px] shadow-lg z-50 ml-10">
+                  <div className="absolute top-[88px] left-0 w-[380px] bg-[#2a2a2a] border-[2.6px] border-black rounded-[20px] shadow-lg z-50">
                     {SPORTS.map((sport) => (
                       <button
                         key={sport}
