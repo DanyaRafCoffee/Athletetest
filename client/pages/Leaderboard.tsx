@@ -78,13 +78,13 @@ export default function Leaderboard() {
             <div className="relative" ref={sportDropdownRef}>
               <button
                 onClick={() => setShowSportDropdown(!showSportDropdown)}
-                className="w-[380px] h-[76px] rounded-[20px] border-[2.6px] border-black bg-[#D9D9D9]/40 flex items-center justify-center px-6 "
+                className="w-[380px] h-[76px] rounded-[20px] border-[2.6px] border-black bg-[#D9D9D9]/40 flex items-center justify-center px-6 relative"
               >
                 <span className="text-white text-[32px] font-light">{sportFilter}</span>
               </button>
 
               {showSportDropdown && (
-                <div className="absolute top-[88px] left-0 w-[380px] bg-[#2a2a2a] border-[2.6px] border-black rounded-[20px] shadow-lg z-50">
+                <div className=" top-[88px] left-0 w-[380px] bg-[#2a2a2a] border-[2.6px] border-black rounded-[20px] shadow-lg z-50">
                   {RATING_SPORTS.map((sport) => (
                     <button
                       key={sport}
