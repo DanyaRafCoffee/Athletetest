@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { LEADERBOARD_DATA, HEADER_DATA } from "@/constants/leaderboardConstants";
-import { SPORTS, DATE_FILTERS } from "@/constants/filterConstants";
+import { SPORTS } from "@/constants/filterConstants";
 
 export default function Leaderboard() {
   const navigate = useNavigate();
