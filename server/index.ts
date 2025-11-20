@@ -19,7 +19,7 @@ export function createServer() {
 
   app.get("/api/demo", handleDemo);
 
-  // Geocoding endpoint
+  // Geocoding endpoint using OpenStreetMap Nominatim
   app.get("/api/geocode", async (req, res) => {
     const { longitude, latitude } = req.query;
 
@@ -30,33 +30,47 @@ export function createServer() {
     }
 
     try {
-      const apiKey = "fc9d5a45-9eb0-4980-a2c8-21b53a4ddbd4";
-      const apiUrl = `https://geocode-maps.yandex.ru/1.x/?apikey=${apiKey}&geocode=${longitude},${latitude}&format=json`;
+      const apiUrl = `https://nominatim.openstreetmap.org/reverse?format=json&lat=${latitude}&lon=${longitude}&zoom=18&addressdetails=1`;
 
-      console.log("Calling Yandex API:", apiUrl);
+      console.log("Calling Nominatim API:", apiUrl);
 
-      const response = await fetch(apiUrl);
-      console.log("Yandex API response status:", response.status);
+      const response = await fetch(apiUrl, {
+        headers: {
+          "User-Agent": "Sports-App-CreateRequest/1.0",
+        },
+      });
+
+      console.log("Nominatim API response status:", response.status);
 
       if (!response.ok) {
         const errorText = await response.text();
-        console.error("Yandex API error response:", errorText);
-        throw new Error(`Yandex API error: ${response.status}`);
+        console.error("Nominatim API error response:", errorText);
+        throw new Error(`Nominatim API error: ${response.status}`);
       }
 
       const data = await response.json();
-      console.log("Yandex API response data:", data);
+      console.log("Nominatim API response data:", data);
 
-      if (
-        data.response &&
-        data.response.GeoObjectCollection &&
-        data.response.GeoObjectCollection.featureMember &&
-        data.response.GeoObjectCollection.featureMember.length > 0
-      ) {
-        const firstResult = data.response.GeoObjectCollection.featureMember[0];
-        const address = firstResult.GeoObject.metaDataProperty.GeocoderMetaData.text;
-        console.log("Found address:", address);
-        return res.json({ address });
+      if (data.address) {
+        let address = "";
+
+        if (data.address.road || data.address.street) {
+          address += data.address.road || data.address.street;
+        }
+
+        if (data.address.house_number) {
+          address += ", д. " + data.address.house_number;
+        }
+
+        if (data.address.city) {
+          address = (address ? address + ", " : "") + "г. " + data.address.city;
+        } else if (data.address.town) {
+          address = (address ? address + ", " : "") + "г. " + data.address.town;
+        }
+
+        const finalAddress = address || data.address.display_name;
+        console.log("Found address:", finalAddress);
+        return res.json({ address: finalAddress });
       }
 
       console.log("No geocoding results found");
