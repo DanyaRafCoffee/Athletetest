@@ -259,7 +259,7 @@ export default function FindRequests() {
                 onClick={() => navigate("/profile")}
               >
                 <img
-                  src="https://api.builder.io/api/v1/image/assets/TEMP/57b1825b265d4113d32bb4e7a341952f19bb981b?width=94"
+                  src="/placeholder_avatar.jpd"
                   alt="Profile"
                   className="w-[47px] h-[44px] rounded-[10px]"
                 />
@@ -460,6 +460,16 @@ export default function FindRequests() {
                   </div>
                 </div>
               ))}
+            </div>
+
+            {/* Create Request Button */}
+            <div className="flex justify-center mt-14">
+              <button
+                onClick={() => navigate("/create-request")}
+                className="px-8 py-3 bg-[#4182F9] rounded-[25px] text-white text-[22px] font-normal hover:bg-[#3571e8] transition-colors shadow-[0_8px_4px_rgba(0,0,0,0.5)]"
+              >
+                Создать заявку
+              </button>
             </div>
           </div>
         </div>

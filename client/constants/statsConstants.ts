@@ -1,12 +1,12 @@
 // Badge images (will be stored locally later)
 export const BADGE_IMAGES = {
-  badge1: "https://cdn.builder.io/api/v1/image/assets%2F635dc79d00a84968a9ce0db86ca1481c%2F6f781c7d657449a4b6865c71b9dcae33",
-  badge2: "https://cdn.builder.io/api/v1/image/assets%2F635dc79d00a84968a9ce0db86ca1481c%2F436c600d38934b6fbcbf89b701ac5cbd",
-  badge3: "https://cdn.builder.io/api/v1/image/assets%2F635dc79d00a84968a9ce0db86ca1481c%2Fc383a9c9b61a4bd5b5a7928a3d96b1e9",
-  badge4: "https://cdn.builder.io/api/v1/image/assets%2F635dc79d00a84968a9ce0db86ca1481c%2F3013a7dbf43c4ec4bff5ec0f2ffe198a",
-  badge5: "https://cdn.builder.io/api/v1/image/assets%2F635dc79d00a84968a9ce0db86ca1481c%2F5adb2b54e6044ecda6bb9eeafb2a5350",
-  badge6: "https://cdn.builder.io/api/v1/image/assets%2F635dc79d00a84968a9ce0db86ca1481c%2F53fd68ca36d94c658a70b033eaa4abe1",
-  badge7: "https://cdn.builder.io/api/v1/image/assets%2F635dc79d00a84968a9ce0db86ca1481c%2F9016fadabe574c27986aa70b2b9289d7",
+  badge1: "/bronze.png",
+  badge2: "/silver.png",
+  badge3: "/gold.png",
+  badge4: "/diamond.png",
+  badge5: "/mythic.png",
+  badge6: "/legendary.png",
+  badge7: "/master.png",
 };
 
 // User stats placeholder data
@@ -65,6 +65,6 @@ export const USER_STATS = {
   // Profile image URLs
   profileImage: "https://api.builder.io/api/v1/image/assets/TEMP/000c31178b1986558f577f90ead0f3bed101a8c7",
   rankingProfileImage: "https://api.builder.io/api/v1/image/assets/TEMP/32ebcf84f02708bee100e78af81c2b3d4553326e",
-  catImage: "https://api.builder.io/api/v1/image/assets/TEMP/592971601b73e2186d29e697d3b86bb56af5f25e",
+  catImage: "/wawa_cat.webp",
   badgeImage: "https://api.builder.io/api/v1/image/assets/TEMP/ebe57f66a484ef88c48baa2f264625de94153ec5"
 };
