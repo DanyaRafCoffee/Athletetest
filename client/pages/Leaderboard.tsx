@@ -89,7 +89,7 @@ export default function Leaderboard() {
               <div className="relative" ref={sportDropdownRef}>
                 <button
                   onClick={() => setShowSportDropdown(!showSportDropdown)}
-                  className="w-[380px] h-[76px] rounded-[20px] border-[2.6px] border-black bg-[#D9D9D9]/40 flex items-center justify-center  relative"
+                  className="w-[380px] h-[76px] rounded-[20px] border-[2.6px] border-black bg-[#D9D9D9]/40 flex items-center justify-center px-6 relative"
                 >
                   <span className="text-white text-[32px] font-light">{sportFilter}</span>
                 </button>
