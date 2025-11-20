@@ -360,7 +360,7 @@ export default function CreateRequest() {
                 {/* Location */}
                 <div>
                   <label className="block text-white text-[32px] font-normal mb-4 opacity-80">
-                    Место проведения (начинайте вводить или выберите точ��у на
+                    Место проведения (начинайте вводить или выберите точку на
                     карте)
                   </label>
                   <div className="relative" ref={locationDropdownRef}>
