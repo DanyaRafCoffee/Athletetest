@@ -40,7 +40,7 @@ export default function YandexMap({ onAddressSelect, height = "327px" }: YandexM
       mapInstance.current = map;
       setMapReady(true);
 
-      map.events.add("click", async (e: any) => {
+      map.events.add("click", (e: any) => {
         const coords = e.get("coords");
         if (!coords) return;
 
@@ -51,18 +51,17 @@ export default function YandexMap({ onAddressSelect, height = "327px" }: YandexM
         map.geoObjects.removeAll();
         map.geoObjects.add(placemark);
 
-        try {
-          const geocoder = ymaps.geocode(coords);
-          geocoder.then((res: any) => {
+        ymaps.geocode(coords).then((res: any) => {
+          if (res.geoObjects.length > 0) {
             const firstGeoObject = res.geoObjects.get(0);
-            if (firstGeoObject) {
-              const address = firstGeoObject.getAddressLine();
+            const address = firstGeoObject.getAddressLine();
+            if (address) {
               onAddressSelect(address);
             }
-          });
-        } catch (error) {
+          }
+        }).catch((error: any) => {
           console.error("Geocoding error:", error);
-        }
+        });
       });
     };
 
