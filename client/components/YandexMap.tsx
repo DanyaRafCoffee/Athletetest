@@ -21,12 +21,10 @@ export default function YandexMap({ onAddressSelect, height = "327px" }: YandexM
       script.src = "https://api-maps.yandex.ru/2.1/?apikey=5fc13c47-2b27-472d-ad58-b5695c1e0d67&lang=ru_RU";
       script.async = true;
       script.onload = () => {
-        (window as any).ymaps.ready(() => {
-          const ymaps = (window as any).ymaps;
-          ymaps.modules.require(['geocode'], () => {
-            initializeMap();
-          });
-        });
+        (window as any).ymaps.ready(initializeMap);
+      };
+      script.onerror = () => {
+        console.error("Failed to load Yandex Maps API");
       };
       document.head.appendChild(script);
     };
@@ -35,7 +33,7 @@ export default function YandexMap({ onAddressSelect, height = "327px" }: YandexM
       if (!mapContainer.current) return;
 
       const ymaps = (window as any).ymaps;
-      
+
       const map = new ymaps.Map(mapContainer.current, {
         center: [55.75, 37.57],
         zoom: 12,
@@ -56,18 +54,32 @@ export default function YandexMap({ onAddressSelect, height = "327px" }: YandexM
         map.geoObjects.removeAll();
         map.geoObjects.add(placemark);
 
-        ymaps.geocode(coords).then((res: any) => {
-          if (res.geoObjects.length > 0) {
-            const firstGeoObject = res.geoObjects.get(0);
-            const address = firstGeoObject.getAddressLine();
-            if (address) {
-              onAddressSelect(address);
-            }
+        try {
+          const geocodePromise = ymaps.geocode(coords);
+          if (geocodePromise && typeof geocodePromise.then === 'function') {
+            geocodePromise.then((res: any) => {
+              try {
+                if (res && res.geoObjects && res.geoObjects.length > 0) {
+                  const firstGeoObject = res.geoObjects.get(0);
+                  if (firstGeoObject) {
+                    const address = firstGeoObject.getAddressLine();
+                    if (address) {
+                      onAddressSelect(address);
+                    }
+                  }
+                }
+              } catch (e) {
+                console.error("Error processing geocode response:", e);
+              }
+            }).catch((error: any) => {
+              console.error("Geocoding error:", error);
+            });
+          } else {
+            console.error("ymaps.geocode is not available");
           }
-        }).catch((error: any) => {
-          console.error("Geocoding error:", error);
-          console.error("Error details:", JSON.stringify(error));
-        });
+        } catch (error) {
+          console.error("Geocoding exception:", error);
+        }
       });
     };
 
