@@ -50,7 +50,7 @@ export const PUBLIC_PROFILE_DATA = {
     gradientFrom: "#4F0A0A",
     gradientTo: "#780000",
     badgeColor: "#760000",
-    badgeImage: "https://api.builder.io/api/v1/image/assets/TEMP/5e5d19819780a143546753c37e99190bb009cdf0",
+    badgeImage: "/legendary.png",
   },
   
   // Other sports
@@ -63,7 +63,7 @@ export const PUBLIC_PROFILE_DATA = {
       gradientFrom: "#4F0A0A",
       gradientTo: "#780000",
       badgeColor: "#760000",
-      badgeImage: "https://api.builder.io/api/v1/image/assets/TEMP/65c2779bc035689e645a64809941749ae694a4a3",
+      badgeImage: "/legendary.png",
     },
     {
       id: 2,
@@ -73,7 +73,7 @@ export const PUBLIC_PROFILE_DATA = {
       gradientFrom: "#34064F",
       gradientTo: "#680288",
       badgeColor: "#8700BC",
-      badgeImage: "https://api.builder.io/api/v1/image/assets/TEMP/91ad76b7822203253661bd13a330e3ad37e6e6d8",
+      badgeImage: "/mythic.png",
     },
     {
       id: 3,
@@ -83,7 +83,7 @@ export const PUBLIC_PROFILE_DATA = {
       gradientFrom: "#008E79",
       gradientTo: "#00A9C0",
       badgeColor: "#0BA2C4",
-      badgeImage: "https://api.builder.io/api/v1/image/assets/TEMP/26483a41c43f221ea136009c70dfae9d5d4d4265",
+      badgeImage: "/diamond.png",
     },
     {
       id: 4,
@@ -93,7 +93,7 @@ export const PUBLIC_PROFILE_DATA = {
       gradientFrom: "#763700",
       gradientTo: "#FFA04D",
       badgeColor: "#FF6200",
-      badgeImage: "https://api.builder.io/api/v1/image/assets/TEMP/eeea5cd73df97f2be2eba6937d74a3f8e8a75a37",
+      badgeImage: "/master.png",
     },
   ] as Sport[],
   
@@ -113,12 +113,12 @@ export const PUBLIC_PROFILE_DATA = {
     {
       id: 1,
       name: "Крылов (Spectrum) Даниил",
-      avatar: "https://api.builder.io/api/v1/image/assets/TEMP/1c0c1f7ca8ef2ae4380cf6cb33cd212e1dc8d200",
+      avatar: "/placeholder_avatar.jpg",
     },
     {
       id: 2,
       name: "Крылов (Spectrum) Даниил",
-      avatar: "https://api.builder.io/api/v1/image/assets/TEMP/1c0c1f7ca8ef2ae4380cf6cb33cd212e1dc8d200",
+      avatar: "/placeholder_avatar.jpg",
     },
   ] as Opponent[],
   
@@ -126,8 +126,8 @@ export const PUBLIC_PROFILE_DATA = {
   overallRanking: {
     position: "1",
     name: "Крылов (Spectrum) Даниил",
-    avatar: "https://api.builder.io/api/v1/image/assets/TEMP/1c0c1f7ca8ef2ae4380cf6cb33cd212e1dc8d200",
-    badge: "https://api.builder.io/api/v1/image/assets/TEMP/887957b913bf2b1850a825a0f0ca5030b978544e",
+    avatar: "/placeholder_avatar.jpg",
+    badge: "/legendary.png",
   },
   
   // Header info
