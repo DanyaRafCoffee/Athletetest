@@ -7,6 +7,7 @@ import {
   PopoverTrigger,
   PopoverContent,
 } from "@/components/ui/popover";
+import YandexMap from "@/components/YandexMap";
 
 export default function CreateRequest() {
   const navigate = useNavigate();
@@ -275,7 +276,7 @@ export default function CreateRequest() {
                 {/* Number of Players */}
                 <div>
                   <label className="block text-white text-[32px] font-normal mb-4 opacity-80">
-                    Введите кол-во игроков
+                    Введите кол-во игрок��в
                   </label>
                   <input
                     type="text"
