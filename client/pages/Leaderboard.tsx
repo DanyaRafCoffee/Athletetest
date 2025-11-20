@@ -107,7 +107,7 @@ export default function Leaderboard() {
                           setSportFilter(sport);
                           setShowSportDropdown(false);
                         }}
-                        className="w-full px-6 py-4 text-left text-white text-[20px] font-light hover:bg-[#3a3a3a] transition-colors border-b border-white/20 last:border-b-0 ml-10"
+                        className="w-full px-6 py-4 text-left text-white text-[20px] font-light hover:bg-[#3a3a3a] transition-colors border-b border-white/20 last:border-b-0"
                       >
                         {sport}
                       </button>
