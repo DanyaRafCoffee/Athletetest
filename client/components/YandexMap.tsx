@@ -54,32 +54,28 @@ export default function YandexMap({ onAddressSelect, height = "327px" }: YandexM
         map.geoObjects.removeAll();
         map.geoObjects.add(placemark);
 
-        try {
-          const geocodePromise = ymaps.geocode(coords);
-          if (geocodePromise && typeof geocodePromise.then === 'function') {
-            geocodePromise.then((res: any) => {
-              try {
-                if (res && res.geoObjects && res.geoObjects.length > 0) {
-                  const firstGeoObject = res.geoObjects.get(0);
-                  if (firstGeoObject) {
-                    const address = firstGeoObject.getAddressLine();
-                    if (address) {
-                      onAddressSelect(address);
-                    }
-                  }
-                }
-              } catch (e) {
-                console.error("Error processing geocode response:", e);
+        const [latitude, longitude] = coords;
+        const apiUrl = `https://geocode-maps.yandex.ru/1.x/?apikey=5fc13c47-2b27-472d-ad58-b5695c1e0d67&geocode=${longitude},${latitude}&format=json`;
+
+        fetch(apiUrl)
+          .then((response) => response.json())
+          .then((data) => {
+            if (
+              data.response &&
+              data.response.GeoObjectCollection &&
+              data.response.GeoObjectCollection.featureMember &&
+              data.response.GeoObjectCollection.featureMember.length > 0
+            ) {
+              const firstResult = data.response.GeoObjectCollection.featureMember[0];
+              const address = firstResult.GeoObject.metaDataProperty.GeocoderMetaData.text;
+              if (address) {
+                onAddressSelect(address);
               }
-            }).catch((error: any) => {
-              console.error("Geocoding error:", error);
-            });
-          } else {
-            console.error("ymaps.geocode is not available");
-          }
-        } catch (error) {
-          console.error("Geocoding exception:", error);
-        }
+            }
+          })
+          .catch((error) => {
+            console.error("Geocoding error:", error);
+          });
       });
     };
 
