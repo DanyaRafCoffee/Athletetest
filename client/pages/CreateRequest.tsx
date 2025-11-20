@@ -292,7 +292,7 @@ export default function CreateRequest() {
                           className={`text-[24px] ${dateInput ? "text-black" : "text-black/40"}`}
                         >
                           {dateInput ||
-                            "Выберите из спис��а или введите в формате ДД.ММ.ГГГГ"}
+                            "Выберите из календаря или введите в формате ДД.ММ.ГГГГ"}
                         </span>
                         <svg
                           className="w-[35px] h-[35px] opacity-50"
