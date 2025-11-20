@@ -39,6 +39,7 @@ export const App = () => (
           <Route path="/find-requests" element={<FindRequests />} />
           <Route path="/request-data" element={<RequestData />} />
           <Route path="/create-request" element={<CreateRequest />} />
+          <Route path="/leaderboard" element={<Leaderboard />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
