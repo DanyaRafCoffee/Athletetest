@@ -17,7 +17,7 @@ export default function YandexMap({ onAddressSelect, height = "327px" }: YandexM
       }
 
       const script = document.createElement("script");
-      script.src = "https://api-maps.yandex.ru/2.1/?apikey=5fc13c47-2b27-472d-ad58-b5695c1e0d67&lang=ru_RU";
+      script.src = "https://api-maps.yandex.ru/2.1/?apikey=fc9d5a45-9eb0-4980-a2c8-21b53a4ddbd4&lang=ru_RU";
       script.async = true;
       script.onload = () => {
         (window as any).ymaps.ready(initializeMap);
