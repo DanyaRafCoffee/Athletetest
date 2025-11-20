@@ -74,7 +74,7 @@ export default function Leaderboard() {
           </div>
 
 
-          <div className="flex gap-4 p-8 min-h-[918px]">
+          <div className="flex gap-4">
             <div className="relative " ref={sportDropdownRef}>
               <button
                 onClick={() => setShowSportDropdown(!showSportDropdown)}
