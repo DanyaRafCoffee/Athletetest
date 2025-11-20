@@ -57,29 +57,40 @@ export default function YandexMap({ onAddressSelect, height = "327px" }: YandexM
         const [latitude, longitude] = coords;
         const apiUrl = `https://geocode-maps.yandex.ru/1.x/?apikey=5fc13c47-2b27-472d-ad58-b5695c1e0d67&geocode=${longitude},${latitude}&format=json`;
 
-        fetch(apiUrl)
+        fetch(apiUrl, { method: 'GET' })
           .then((response) => {
+            console.log("Response status:", response.status);
             if (!response.ok) {
               throw new Error(`HTTP error! status: ${response.status}`);
             }
-            return response.json();
+            return response.text();
           })
-          .then((data) => {
-            if (
-              data.response &&
-              data.response.GeoObjectCollection &&
-              data.response.GeoObjectCollection.featureMember &&
-              data.response.GeoObjectCollection.featureMember.length > 0
-            ) {
-              const firstResult = data.response.GeoObjectCollection.featureMember[0];
-              const address = firstResult.GeoObject.metaDataProperty.GeocoderMetaData.text;
-              if (address) {
-                onAddressSelect(address);
+          .then((text) => {
+            try {
+              const data = JSON.parse(text);
+              console.log("Geocode response data:", data);
+
+              if (
+                data.response &&
+                data.response.GeoObjectCollection &&
+                data.response.GeoObjectCollection.featureMember &&
+                data.response.GeoObjectCollection.featureMember.length > 0
+              ) {
+                const firstResult = data.response.GeoObjectCollection.featureMember[0];
+                const address = firstResult.GeoObject.metaDataProperty.GeocoderMetaData.text;
+                console.log("Found address:", address);
+                if (address) {
+                  onAddressSelect(address);
+                }
+              } else {
+                console.warn("No geocoding results found");
               }
+            } catch (parseError) {
+              console.error("Error parsing response:", parseError);
             }
           })
           .catch((error) => {
-            console.error("Geocoding error:", error);
+            console.error("Geocoding fetch error:", error);
           });
       });
     };
