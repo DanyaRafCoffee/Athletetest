@@ -50,7 +50,7 @@ export default function Login() {
             <div className="relative">
               <div className="border border-[#212121] bg-black p-4">
                 <label className="block text-white text-[10px] font-medium mb-2">
-                  Имя пользователя
+                  Адрес электронной почты/имя пользователя
                 </label>
                 <input
                   type="text"
