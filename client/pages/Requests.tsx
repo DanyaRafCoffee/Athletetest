@@ -47,7 +47,7 @@ export default function Requests() {
       eventName: "Lorem Ipsum Cup #1",
       date: "15.10.2025, 14:50",
       sport: "Волейбол",
-      applicationStatus: "Завершена",
+      applicationStatus: "Заверше��а",
       gameResult: "Победа",
       resultColor: "green",
     },
@@ -167,56 +167,58 @@ export default function Requests() {
             </svg>
 
             {/* Messages Icon - Active */}
-            <div className="relative">
-              <div className="absolute left-0 top-0 w-[76px] h-[50px] bg-gradient-to-r from-[#4182F9]/50 to-[#4182F9]/0 -ml-10 mt-[-0.99rem]"></div>
-              <svg
-                className="w-[21px] h-[21px] relative z-10"
-                viewBox="0 0 21 21"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M15.7325 9.44126V12.9413C15.7325 13.1688 15.7238 13.3875 15.6975 13.5975C15.4963 15.96 14.105 17.1325 11.5413 17.1325H11.1913C10.9725 17.1325 10.7625 17.2375 10.6312 17.4125L9.58126 18.8125C9.11751 19.4337 8.365 19.4337 7.90125 18.8125L6.85124 17.4125C6.73749 17.2637 6.48375 17.1325 6.29125 17.1325H5.94126C3.15001 17.1325 1.75 16.4413 1.75 12.9413V9.44126C1.75 6.87751 2.93126 5.48626 5.28501 5.28501C5.49501 5.25876 5.71376 5.25 5.94126 5.25H11.5413C14.3325 5.25 15.7325 6.65001 15.7325 9.44126Z"
-                  stroke="white"
-                  strokeWidth="1.5"
-                  strokeMiterlimit="10"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                />
-                <path
-                  d="M19.2327 5.94126V9.44126C19.2327 12.0138 18.0514 13.3963 15.6977 13.5975C15.7239 13.3875 15.7327 13.1688 15.7327 12.9413V9.44126C15.7327 6.65001 14.3327 5.25 11.5414 5.25H5.94141C5.71391 5.25 5.49516 5.25876 5.28516 5.28501C5.48641 2.93126 6.87766 1.75 9.44141 1.75H15.0414C17.8327 1.75 19.2327 3.15001 19.2327 5.94126Z"
-                  stroke="white"
-                  strokeWidth="1.5"
-                  strokeMiterlimit="10"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                />
-                <path
-                  d="M11.8086 11.5938H11.8164"
-                  stroke="white"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                />
-                <path
-                  d="M8.74606 11.5938H8.75394"
-                  stroke="white"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                />
-                <path
-                  d="M5.68356 11.5938H5.69144"
-                  stroke="white"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                />
-              </svg>
-            </div>
+            <button onClick={() => navigate(`/${username}/requests`)}>
+              <div className="relative">
+                <div className="absolute left-0 top-0 w-[76px] h-[50px] bg-gradient-to-r from-[#4182F9]/50 to-[#4182F9]/0 -ml-10 mt-[-0.99rem]"></div>
+                <svg
+                  className="w-[21px] h-[21px] relative z-10"
+                  viewBox="0 0 21 21"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M15.7325 9.44126V12.9413C15.7325 13.1688 15.7238 13.3875 15.6975 13.5975C15.4963 15.96 14.105 17.1325 11.5413 17.1325H11.1913C10.9725 17.1325 10.7625 17.2375 10.6312 17.4125L9.58126 18.8125C9.11751 19.4337 8.365 19.4337 7.90125 18.8125L6.85124 17.4125C6.73749 17.2637 6.48375 17.1325 6.29125 17.1325H5.94126C3.15001 17.1325 1.75 16.4413 1.75 12.9413V9.44126C1.75 6.87751 2.93126 5.48626 5.28501 5.28501C5.49501 5.25876 5.71376 5.25 5.94126 5.25H11.5413C14.3325 5.25 15.7325 6.65001 15.7325 9.44126Z"
+                    stroke="white"
+                    strokeWidth="1.5"
+                    strokeMiterlimit="10"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  />
+                  <path
+                    d="M19.2327 5.94126V9.44126C19.2327 12.0138 18.0514 13.3963 15.6977 13.5975C15.7239 13.3875 15.7327 13.1688 15.7327 12.9413V9.44126C15.7327 6.65001 14.3327 5.25 11.5414 5.25H5.94141C5.71391 5.25 5.49516 5.25876 5.28516 5.28501C5.48641 2.93126 6.87766 1.75 9.44141 1.75H15.0414C17.8327 1.75 19.2327 3.15001 19.2327 5.94126Z"
+                    stroke="white"
+                    strokeWidth="1.5"
+                    strokeMiterlimit="10"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  />
+                  <path
+                    d="M11.8086 11.5938H11.8164"
+                    stroke="white"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  />
+                  <path
+                    d="M8.74606 11.5938H8.75394"
+                    stroke="white"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  />
+                  <path
+                    d="M5.68356 11.5938H5.69144"
+                    stroke="white"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  />
+                </svg>
+              </div>
+            </button>
 
             {/* Settings Icon */}
-            <button onClick={() => navigate("/settings")}>
+            <button onClick={() => navigate(`/${username}/settings`)}>
               <svg
                 className="w-[21px] h-[22px] opacity-50 hover:opacity-100 transition-opacity"
                 viewBox="0 0 21 22"
