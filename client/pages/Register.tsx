@@ -114,7 +114,7 @@ export default function Register() {
     setTimeout(() => {
       setIsLoading(false);
       // Registration complete - redirect to profile
-      navigate("/profile");
+      navigate(`/${username}/profile`);
     }, 500);
   };
 
