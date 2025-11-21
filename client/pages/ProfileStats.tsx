@@ -99,7 +99,7 @@ export default function ProfileStats() {
             </svg>
 
             {/* Messages Icon */}
-            <button onClick={() => navigate("/requests")}>
+            <button onClick={() => navigate(`/${username}/requests`)}>
               <svg
                 className="w-[21px] h-[21px] opacity-50 hover:opacity-100 transition-opacity"
                 viewBox="0 0 21 21"
