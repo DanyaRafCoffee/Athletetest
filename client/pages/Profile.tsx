@@ -200,7 +200,7 @@ export default function Profile() {
           <div className="flex items-center justify-between mb-12">
             <div>
               <h1 className="text-[#C9D2FF] text-2xl font-medium mb-1">
-                Добрый день, {:username}
+                Добрый день, Захар
               </h1>
               <p className="text-white text-base font-light">
                 Сб, 11 октября 2025
