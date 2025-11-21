@@ -1,5 +1,5 @@
 import { useState, useRef, useEffect } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import { SPORTS } from "@/constants/filterConstants";
 import { Calendar } from "@/components/ui/calendar";
 import {
@@ -11,6 +11,7 @@ import YandexMap from "@/components/YandexMap";
 
 export default function CreateRequest() {
   const navigate = useNavigate();
+  const { username } = useParams<{ username: string }>();
   const [sport, setSport] = useState("");
   const [numberOfPlayers, setNumberOfPlayers] = useState("");
   const [date, setDate] = useState<Date | undefined>(undefined);
@@ -125,7 +126,7 @@ export default function CreateRequest() {
             <div className="flex items-center gap-4">
               {/* Search */}
               <button
-                onClick={() => navigate("/find-requests")}
+                onClick={() => navigate("/find-requests", { replace: false })}
                 className="w-[46px] h-[47px] rounded-[10px] bg-white/50 flex items-center justify-center hover:bg-white/70 transition-colors"
               >
                 <svg
@@ -186,7 +187,7 @@ export default function CreateRequest() {
               </div>
 
               {/* Profile Picture */}
-              <button onClick={() => navigate("/profile")}>
+              <button onClick={() => navigate(`/${username}/profile`)}>
                 <img
                   src="/placeholder_avatar.jpg"
                   alt="Profile"

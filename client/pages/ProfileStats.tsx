@@ -1,10 +1,11 @@
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import { motion } from "framer-motion";
 import { USER_STATS } from "@/constants/statsConstants";
 
 export default function ProfileStats() {
   const navigate = useNavigate();
+  const { username } = useParams<{ username: string }>();
   const [bounceCount, setBounceCount] = useState(0);
 
   return (
@@ -15,7 +16,7 @@ export default function ProfileStats() {
           {/* Navigation Icons */}
           <div className="space-y-8 flex flex-col items-center mt-96">
             {/* Dashboard Icon */}
-            <button onClick={() => navigate("/profile")}>
+            <button onClick={() => navigate(`/${username}/profile`)}>
               <svg
                 className="w-[21px] h-[22px] opacity-50 hover:opacity-100 transition-opacity mt-10"
                 viewBox="0 0 21 22"
@@ -98,7 +99,7 @@ export default function ProfileStats() {
             </svg>
 
             {/* Messages Icon */}
-            <button onClick={() => navigate("/requests")}>
+            <button onClick={() => navigate(`/${username}/requests`)}>
               <svg
                 className="w-[21px] h-[21px] opacity-50 hover:opacity-100 transition-opacity"
                 viewBox="0 0 21 21"
@@ -146,7 +147,7 @@ export default function ProfileStats() {
             </button>
 
             {/* Settings Icon */}
-            <button onClick={() => navigate("/settings")}>
+            <button onClick={() => navigate(`/${username}/settings`)}>
               <svg
                 className="w-[21px] h-[22px] opacity-50 hover:opacity-100 transition-opacity"
                 viewBox="0 0 21 22"
@@ -251,9 +252,7 @@ export default function ProfileStats() {
               </div>
 
               {/* Profile Picture */}
-              <button
-                onClick={() => navigate("/profile")}
-              >
+              <button onClick={() => navigate(`/${username}/profile`)}>
                 <img
                   src="/placeholder_avatar.jpg"
                   alt="Profile"

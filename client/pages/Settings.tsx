@@ -1,8 +1,9 @@
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 
 export default function Settings() {
   const navigate = useNavigate();
+  const { username } = useParams<{ username: string }>();
   const [currentPassword, setCurrentPassword] = useState("");
   const [secretQuestionAnswer, setSecretQuestionAnswer] = useState("");
   const [newPassword, setNewPassword] = useState("");
@@ -36,7 +37,7 @@ export default function Settings() {
   };
 
   const handleLogout = () => {
-    const confirmed = window.confirm("Вы действительно хотите выйти?");
+    const confirmed = window.confirm("Вы де��ствительно хотите выйти?");
     if (confirmed) {
       console.log("Logging out...");
       navigate("/");
@@ -51,7 +52,7 @@ export default function Settings() {
           {/* Navigation Icons */}
           <div className="space-y-8 flex flex-col items-center mt-96">
             {/* Dashboard Icon */}
-            <button onClick={() => navigate("/profile")}>
+            <button onClick={() => navigate(`/${username}/profile`)}>
               <svg
                 className="w-[21px] h-[22px] opacity-50 hover:opacity-100 transition-opacity mt-10"
                 viewBox="0 0 21 22"
@@ -78,7 +79,7 @@ export default function Settings() {
             </button>
 
             {/* Analytics Icon */}
-            <button onClick={() => navigate("/stats")}>
+            <button onClick={() => navigate(`/${username}/stats`)}>
               <svg
                 className="w-[21px] h-[20px] opacity-50 hover:opacity-100 transition-opacity"
                 viewBox="0 0 21 20"
@@ -133,7 +134,7 @@ export default function Settings() {
             </svg>
 
             {/* Messages Icon */}
-            <button onClick={() => navigate("/requests")}>
+            <button onClick={() => navigate(`/${username}/requests`)}>
               <svg
                 className="w-[21px] h-[21px] opacity-50 hover:opacity-100 transition-opacity"
                 viewBox="0 0 21 21"
@@ -181,32 +182,34 @@ export default function Settings() {
             </button>
 
             {/* Settings Icon - Active */}
-            <div className="relative">
-              <div className="absolute left-0 top-0 w-[76px] h-[50px] bg-gradient-to-r from-[#4182F9]/50 to-[#4182F9]/0 -ml-10 mt-[-0.99rem]"></div>
-              <svg
-                className="w-[21px] h-[22px] relative z-10"
-                viewBox="0 0 21 22"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M10.5 13.75C11.9497 13.75 13.125 12.5188 13.125 11C13.125 9.48122 11.9497 8.25 10.5 8.25C9.05025 8.25 7.875 9.48122 7.875 11C7.875 12.5188 9.05025 13.75 10.5 13.75Z"
-                  stroke="white"
-                  strokeWidth="1.5"
-                  strokeMiterlimit="10"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                />
-                <path
-                  d="M1.75 11.8066V10.1933C1.75 9.23998 2.49375 8.45165 3.4125 8.45165C4.99625 8.45165 5.64375 7.27832 4.8475 5.83915C4.3925 5.01415 4.66375 3.94165 5.46 3.46498L6.97375 2.55748C7.665 2.12665 8.5575 2.38332 8.96875 3.10748L9.065 3.28165C9.8525 4.72082 11.1475 4.72082 11.9438 3.28165L12.04 3.10748C12.4513 2.38332 13.3438 2.12665 14.035 2.55748L15.5488 3.46498C16.345 3.94165 16.6163 5.01415 16.1613 5.83915C15.365 7.27832 16.0125 8.45165 17.5963 8.45165C18.5063 8.45165 19.2588 9.23082 19.2588 10.1933V11.8066C19.2588 12.76 18.515 13.5483 17.5963 13.5483C16.0125 13.5483 15.365 14.7216 16.1613 16.1608C16.6163 16.995 16.345 18.0583 15.5488 18.535L14.035 19.4425C13.3438 19.8733 12.4513 19.6166 12.04 18.8925L11.9438 18.7183C11.1563 17.2791 9.86125 17.2791 9.065 18.7183L8.96875 18.8925C8.5575 19.6166 7.665 19.8733 6.97375 19.4425L5.46 18.535C4.66375 18.0583 4.3925 16.9858 4.8475 16.1608C5.64375 14.7216 4.99625 13.5483 3.4125 13.5483C2.49375 13.5483 1.75 12.76 1.75 11.8066Z"
-                  stroke="white"
-                  strokeWidth="1.5"
-                  strokeMiterlimit="10"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                />
-              </svg>
-            </div>
+            <button onClick={() => navigate(`/${username}/settings`)}>
+              <div className="relative">
+                <div className="absolute left-0 top-0 w-[76px] h-[50px] bg-gradient-to-r from-[#4182F9]/50 to-[#4182F9]/0 -ml-10 mt-[-0.99rem]"></div>
+                <svg
+                  className="w-[21px] h-[22px] relative z-10"
+                  viewBox="0 0 21 22"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M10.5 13.75C11.9497 13.75 13.125 12.5188 13.125 11C13.125 9.48122 11.9497 8.25 10.5 8.25C9.05025 8.25 7.875 9.48122 7.875 11C7.875 12.5188 9.05025 13.75 10.5 13.75Z"
+                    stroke="white"
+                    strokeWidth="1.5"
+                    strokeMiterlimit="10"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  />
+                  <path
+                    d="M1.75 11.8066V10.1933C1.75 9.23998 2.49375 8.45165 3.4125 8.45165C4.99625 8.45165 5.64375 7.27832 4.8475 5.83915C4.3925 5.01415 4.66375 3.94165 5.46 3.46498L6.97375 2.55748C7.665 2.12665 8.5575 2.38332 8.96875 3.10748L9.065 3.28165C9.8525 4.72082 11.1475 4.72082 11.9438 3.28165L12.04 3.10748C12.4513 2.38332 13.3438 2.12665 14.035 2.55748L15.5488 3.46498C16.345 3.94165 16.6163 5.01415 16.1613 5.83915C15.365 7.27832 16.0125 8.45165 17.5963 8.45165C18.5063 8.45165 19.2588 9.23082 19.2588 10.1933V11.8066C19.2588 12.76 18.515 13.5483 17.5963 13.5483C16.0125 13.5483 15.365 14.7216 16.1613 16.1608C16.6163 16.995 16.345 18.0583 15.5488 18.535L14.035 19.4425C13.3438 19.8733 12.4513 19.6166 12.04 18.8925L11.9438 18.7183C11.1563 17.2791 9.86125 17.2791 9.065 18.7183L8.96875 18.8925C8.5575 19.6166 7.665 19.8733 6.97375 19.4425L5.46 18.535C4.66375 18.0583 4.3925 16.9858 4.8475 16.1608C5.64375 14.7216 4.99625 13.5483 3.4125 13.5483C2.49375 13.5483 1.75 12.76 1.75 11.8066Z"
+                    stroke="white"
+                    strokeWidth="1.5"
+                    strokeMiterlimit="10"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  />
+                </svg>
+              </div>
+            </button>
           </div>
         </div>
 
@@ -287,9 +290,7 @@ export default function Settings() {
               </div>
 
               {/* Profile Picture */}
-              <button
-                onClick={() => navigate("/profile")}
-              >
+              <button onClick={() => navigate(`/${username}/profile`)}>
                 <img
                   src="/placeholder_avatar.jpg"
                   alt="Profile"

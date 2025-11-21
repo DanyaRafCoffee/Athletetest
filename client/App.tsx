@@ -11,12 +11,16 @@ import Register from "./pages/Register";
 import Profile from "./pages/Profile";
 import ProtectedProfile from "./pages/ProtectedProfile";
 import ProfileStats from "./pages/ProfileStats";
+import ProtectedStats from "./pages/ProtectedStats";
 import PublicProfile from "./pages/PublicProfile";
 import Requests from "./pages/Requests";
+import ProtectedRequests from "./pages/ProtectedRequests";
 import Settings from "./pages/Settings";
+import ProtectedSettings from "./pages/ProtectedSettings";
 import FindRequests from "./pages/FindRequests";
 import RequestData from "./pages/RequestData";
 import CreateRequest from "./pages/CreateRequest";
+import ProtectedCreateRequest from "./pages/ProtectedCreateRequest";
 import Leaderboard from "./pages/Leaderboard";
 import NotFound from "./pages/NotFound";
 
@@ -34,13 +38,17 @@ export const App = () => (
           <Route path="/register" element={<Register />} />
           <Route path="/:username/profile" element={<Profile />} />
           <Route path="/profile" element={<ProtectedProfile />} />
-          <Route path="/stats" element={<ProfileStats />} />
+          <Route path="/:username/stats" element={<ProfileStats />} />
+          <Route path="/stats" element={<ProtectedStats />} />
           <Route path="/public-profile" element={<PublicProfile />} />
-          <Route path="/requests" element={<Requests />} />
-          <Route path="/settings" element={<Settings />} />
+          <Route path="/:username/requests" element={<Requests />} />
+          <Route path="/requests" element={<ProtectedRequests />} />
+          <Route path="/:username/settings" element={<Settings />} />
+          <Route path="/settings" element={<ProtectedSettings />} />
           <Route path="/find-requests" element={<FindRequests />} />
           <Route path="/request-data" element={<RequestData />} />
-          <Route path="/create-request" element={<CreateRequest />} />
+          <Route path="/:username/create-request" element={<CreateRequest />} />
+          <Route path="/create-request" element={<ProtectedCreateRequest />} />
           <Route path="/leaderboard" element={<Leaderboard />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
