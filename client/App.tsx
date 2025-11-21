@@ -31,6 +31,7 @@ export const App = () => (
           <Route path="/" element={<Index />} />
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
+          <Route path="/:username/profile" element={<Profile />} />
           <Route path="/profile" element={<Profile />} />
           <Route path="/stats" element={<ProfileStats />} />
           <Route path="/public-profile" element={<PublicProfile />} />
