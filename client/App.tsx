@@ -5,6 +5,7 @@ import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { AuthProvider } from "@/hooks/useAuth";
 import Index from "./pages/Index";
 import Login from "./pages/Login";
 import Register from "./pages/Register";
@@ -28,32 +29,34 @@ const queryClient = new QueryClient();
 
 export const App = () => (
   <QueryClientProvider client={queryClient}>
-    <TooltipProvider>
-      <Toaster />
-      <Sonner />
-      <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<Index />} />
-          <Route path="/login" element={<Login />} />
-          <Route path="/register" element={<Register />} />
-          <Route path="/:username/profile" element={<Profile />} />
-          <Route path="/profile" element={<ProtectedProfile />} />
-          <Route path="/:username/stats" element={<ProfileStats />} />
-          <Route path="/stats" element={<ProtectedStats />} />
-          <Route path="/public-profile" element={<PublicProfile />} />
-          <Route path="/:username/requests" element={<Requests />} />
-          <Route path="/requests" element={<ProtectedRequests />} />
-          <Route path="/:username/settings" element={<Settings />} />
-          <Route path="/settings" element={<ProtectedSettings />} />
-          <Route path="/find-requests" element={<FindRequests />} />
-          <Route path="/request-data" element={<RequestData />} />
-          <Route path="/:username/create-request" element={<CreateRequest />} />
-          <Route path="/create-request" element={<ProtectedCreateRequest />} />
-          <Route path="/leaderboard" element={<Leaderboard />} />
-          {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
-          <Route path="*" element={<NotFound />} />
-        </Routes>
-      </BrowserRouter>
-    </TooltipProvider>
+    <AuthProvider>
+      <TooltipProvider>
+        <Toaster />
+        <Sonner />
+        <BrowserRouter>
+          <Routes>
+            <Route path="/" element={<Index />} />
+            <Route path="/login" element={<Login />} />
+            <Route path="/register" element={<Register />} />
+            <Route path="/:username/profile" element={<Profile />} />
+            <Route path="/profile" element={<ProtectedProfile />} />
+            <Route path="/:username/stats" element={<ProfileStats />} />
+            <Route path="/stats" element={<ProtectedStats />} />
+            <Route path="/public-profile" element={<PublicProfile />} />
+            <Route path="/:username/requests" element={<Requests />} />
+            <Route path="/requests" element={<ProtectedRequests />} />
+            <Route path="/:username/settings" element={<Settings />} />
+            <Route path="/settings" element={<ProtectedSettings />} />
+            <Route path="/find-requests" element={<FindRequests />} />
+            <Route path="/request-data" element={<RequestData />} />
+            <Route path="/:username/create-request" element={<CreateRequest />} />
+            <Route path="/create-request" element={<ProtectedCreateRequest />} />
+            <Route path="/leaderboard" element={<Leaderboard />} />
+            {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
+            <Route path="*" element={<NotFound />} />
+          </Routes>
+        </BrowserRouter>
+      </TooltipProvider>
+    </AuthProvider>
   </QueryClientProvider>
 );
