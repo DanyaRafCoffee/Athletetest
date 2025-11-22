@@ -37,7 +37,7 @@ export default function Settings() {
   };
 
   const handleLogout = () => {
-    const confirmed = window.confirm("Вы де��ствительно хотите выйти?");
+    const confirmed = window.confirm("Вы действительно хотите выйти?");
     if (confirmed) {
       console.log("Logging out...");
       navigate("/");
